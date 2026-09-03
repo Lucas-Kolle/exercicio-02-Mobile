@@ -1,3 +1,5 @@
+import model.Pessoa
+
 fun main() {
 
     // Função para contar de 1 a 100
@@ -67,14 +69,20 @@ fun main() {
     }
 
     println(calcularFatorial(5))
+
+    // Importando o objeto pessoa
+    val pessoa = Pessoa()
+
+    pessoa.nome = "Lucas"
+    pessoa.idade = 18
+    pessoa.cidade = "Itapevi - SP"
+
+    pessoa.info()
 }
 
 
 
 
-//16 -) Dada uma variável numérica, calcule o seu fatorial (ex: 5! = 5 * 4 * 3 * 2 * 1 =
-//120)
-//Exercícios
 //17 -) Crie um objeto “pessoa” com nome, idade e cidade, depois exiba uma frase com
 //os dados do objeto por meio de um método: “Maria tem 25 anos e mora em São
 //Paulo.”
