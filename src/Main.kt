@@ -78,14 +78,24 @@ fun main() {
     pessoa.cidade = "Itapevi - SP"
 
     pessoa.info()
+
+    var produtos = mutableMapOf(
+        "mouse" to 37,
+        "lousa" to 22,
+        "banana" to 5,
+        "computador" to 5_000,
+        "carro" to 40_000
+    )
+
+    val maiorProduto = produtos.maxBy { it.value }
+
+    println("Produto: ${maiorProduto.key}")
+    println("Valor: ${maiorProduto.value}")
 }
 
 
 
 
-//17 -) Crie um objeto “pessoa” com nome, idade e cidade, depois exiba uma frase com
-//os dados do objeto por meio de um método: “Maria tem 25 anos e mora em São
-//Paulo.”
 //18 -) Crie um array de objetos representando produtos (nome, preço) e mostre o nome
 //do produto mais caro
 //19 -) Crie uma classe “ContaBancaria” com os atributos “nomeTitular” e “saldo”
