@@ -43,12 +43,25 @@ fun main() {
     val valores = mutableListOf<Double>(55.5, 44.2, 300.0, 100.50)
 
     println(somarPrecos(valores))
+
+    // Função para calcular a média da idade considerando apenas os maiores de 18 anos
+    fun calcularMediaMaiorIdade (idades : MutableList<Int>) : String {
+
+        val maioresIdade = idades.filter { it >= 18 }
+
+        val mediaFinal = (maioresIdade.reduce { acumulador, numero -> acumulador + numero }) / maioresIdade.size
+
+        return "A média das idades maiores do que 18 é $mediaFinal"
+    }
+
+    val idadesTeste = mutableListOf<Int>(2, 18, 33,10, 44, 15, 8, 66)
+
+    println(calcularMediaMaiorIdade(idadesTeste))
 }
 
 
 
 
-//14 -) Dada uma lista de preços, calcule o total da compra
 //15 -) Dada uma lista de idades, calcule a média dos maiores de idade
 //16 -) Dada uma variável numérica, calcule o seu fatorial (ex: 5! = 5 * 4 * 3 * 2 * 1 =
 //120)
