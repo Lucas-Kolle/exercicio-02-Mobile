@@ -1,7 +1,7 @@
 fun main() {
 
     // Função para contar de 1 a 100
-    fun contarNumeros (): String{
+    fun contarNumeros () : String{
 
         for (i in 1 .. 100){
 
@@ -30,12 +30,24 @@ fun main() {
     }
 
     println( separarImpares((1 .. 50).toMutableList()))
+
+    // Função para somar os preços
+    fun somarPrecos (precos : MutableList<Double>) : String{
+
+        val precoFinal = precos.reduce { acumulador, numero -> acumulador + numero }
+
+
+        return "O valor a ser cobrado é de R$${precoFinal}"
+    }
+
+    val valores = mutableListOf<Double>(55.5, 44.2, 300.0, 100.50)
+
+    println(somarPrecos(valores))
 }
 
 
 
 
-//13 -) Dada uma lista de números, crie uma nova lista apenas com os ímpares
 //14 -) Dada uma lista de preços, calcule o total da compra
 //15 -) Dada uma lista de idades, calcule a média dos maiores de idade
 //16 -) Dada uma variável numérica, calcule o seu fatorial (ex: 5! = 5 * 4 * 3 * 2 * 1 =
