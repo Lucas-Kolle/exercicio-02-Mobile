@@ -1,4 +1,6 @@
 import model.ContaBancaria
+import model.Funcionario
+import model.Gerente
 import model.Pessoa
 
 fun main() {
@@ -102,14 +104,23 @@ fun main() {
     contaBancaria.consultarSaldo()
     contaBancaria.sacarValor(15_000.0)
     contaBancaria.consultarSaldo()
+
+    // Importando o objeto funcionario
+    val funcionario = Funcionario()
+    funcionario.nome = "Lucas Dias Brandão Kolle"
+    funcionario.salario = 2500.0
+    funcionario.mostrarSalario()
+
+    val gerente = Gerente()
+    gerente.nome = "Lucas Gerente"
+    gerente.salario = 2500.0
+    gerente.mostrarSalario()
 }
 
 
 
 
-//19 -) Crie uma classe “ContaBancaria” com os atributos “nomeTitular” e “saldo”
-//(privado) e crie funções para depositar um valor, sacar um valor e para consultar o
-//saldo
+
 //20 -) Crie uma classe “Funcionario” com “nome”, “salario” e uma função que retorne o
 //salário, depois crie uma classe “Gerente” que herde “Funcionario” e sobrescreva a
 //função que retorna o salário, retornando o salário com 20% de comissão (aumento)
