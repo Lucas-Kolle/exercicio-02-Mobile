@@ -1,3 +1,4 @@
+import model.ContaBancaria
 import model.Pessoa
 
 fun main() {
@@ -91,13 +92,21 @@ fun main() {
 
     println("Produto: ${maiorProduto.key}")
     println("Valor: ${maiorProduto.value}")
+
+    // Importando o objeto contaBancaria
+    val contaBancaria = ContaBancaria()
+
+    contaBancaria.nomeTitular = "Lucas Dias Brandão Kolle"
+    contaBancaria.consultarSaldo()
+    contaBancaria.depositarValor(30_000.0)
+    contaBancaria.consultarSaldo()
+    contaBancaria.sacarValor(15_000.0)
+    contaBancaria.consultarSaldo()
 }
 
 
 
 
-//18 -) Crie um array de objetos representando produtos (nome, preço) e mostre o nome
-//do produto mais caro
 //19 -) Crie uma classe “ContaBancaria” com os atributos “nomeTitular” e “saldo”
 //(privado) e crie funções para depositar um valor, sacar um valor e para consultar o
 //saldo
