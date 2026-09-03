@@ -57,12 +57,21 @@ fun main() {
     val idadesTeste = mutableListOf<Int>(2, 18, 33,10, 44, 15, 8, 66)
 
     println(calcularMediaMaiorIdade(idadesTeste))
+
+    // Função para calcular o fatorial de um número
+    fun calcularFatorial (numero : Int) : String{
+
+        val resultado = (1 .. numero).reduce { acumulador, numero -> acumulador * numero }
+
+        return "O fatorial de $numero! é $resultado"
+    }
+
+    println(calcularFatorial(5))
 }
 
 
 
 
-//15 -) Dada uma lista de idades, calcule a média dos maiores de idade
 //16 -) Dada uma variável numérica, calcule o seu fatorial (ex: 5! = 5 * 4 * 3 * 2 * 1 =
 //120)
 //Exercícios
