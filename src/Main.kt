@@ -20,15 +20,21 @@ fun main() {
     }
 
     println(contarNumeros())
+
+    // Função para separar os ímpares
+    fun separarImpares (numeros : MutableList<Int>) : List<Int>{
+
+        val impares = numeros.filter { it % 2 != 0 } // Faz um filtro dentro do array / lista (se o resto da divisão for 0 ele continua na lista)
+
+        return impares
+    }
+
+    println( separarImpares((1 .. 50).toMutableList()))
 }
 
 
 
 
-//12 -) Escreva um programa que conte de 1 a 100 e:
-//● Se for múltiplo de 3, mostre “Batata”
-//● Se for múltiplo de 5, mostre “Quente”
-//● Se for múltiplo de 3 e 5, mostre “BatataQuente”
 //13 -) Dada uma lista de números, crie uma nova lista apenas com os ímpares
 //14 -) Dada uma lista de preços, calcule o total da compra
 //15 -) Dada uma lista de idades, calcule a média dos maiores de idade
